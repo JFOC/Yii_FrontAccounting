@@ -172,6 +172,13 @@
 						 'label' => 'Messages' // .	(Yii::app()->getModule('message')->getCountUnreadedMessages(Yii::app()->user->getId())?
 						// ' (' . Yii::app()->getModule('message')->getCountUnreadedMessages(Yii::app()->user->getId()) . ')' :''),
 						,'visible' => !Yii::app()->user->isGuest),
+					array('label'=>'Help', //'visible'=>!Yii::app()->user->isGuest, 
+						'items'=>array(  						
+							array('label'=>'How To', 'url'=>array('/site/page?view=howto')),
+							array('label'=>'Vendor ID', 'url'=>array('/site/page?view=vendorid')),
+							array('label'=>'License', 'url'=>array('/site/page?view=license')),
+							),  
+					),
 					array('url'=>Yii::app()->getModule('user')->logoutUrl, 'label'=>Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', 'visible'=>!Yii::app()->user->isGuest),
 				
 				), 
