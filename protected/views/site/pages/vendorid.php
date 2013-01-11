@@ -1,12 +1,11 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - About';
+$this->pageTitle=Yii::app()->name . ' - Vendor';
 $this->breadcrumbs=array(
-	'About',
+	'Vendor',
 );
 ?>
-<h1>About</h1>
+<h1>VENDOR</h1>
 
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+<p>VENDOR ID here.</p>
