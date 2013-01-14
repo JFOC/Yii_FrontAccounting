@@ -58,13 +58,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				array(
 					'name'=>'id',
 					'header'=>'No',
-				),
-				
+				),	
 
 				'code',
 				'code2',
 				'name',
-				'general_ledger_account_type_id',
+				array(					
+					'name'=>'general_ledger_account_type_id',
+					'value'=>'$data->generalLedgerAccountType->name',		
+				),
 				'active_status',
 		
 				array(

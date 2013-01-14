@@ -62,20 +62,53 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				
 
 				'code',
-				'stock_category_id',
-				'tax_type_item_id',
+				array(
+				'name'=>'stock_category_id',
+				'value'=>'$data->stockCategory->name',		
+				),
+				array(
+				'name'=>'tax_type_item_id',
+				'value'=>'$data->taxTypeItem->name',		
+				),
 				'description',
 				'long_description',
 				
-				'measure_unit_id',
-				'stock_type_id',
-				'sales_account_id',
-				'cogs_account_id',
-				'inventory_account_id',
-				'adjustment_account_id',
-				'assembly_account_id',
-				'dimension1_id',
-				'dimension2_id',
+				array(
+				'name'=>'measure_unit_id',
+				'value'=>'$data->measureUnit->name',		
+				),
+				array(
+				'name'=>'stock_type_id',
+				'value'=>'$data->stockType->name',		
+				),
+				array(
+				'name'=>'sales_account_id',
+				'value'=>'$data->salesAccount->name',		
+				),
+				array(
+				'name'=>'cogs_account_id',
+				'value'=>'$data->cogsAccount->name',		
+				),
+				array(
+				'name'=>'inventory_account_id',
+				'value'=>'$data->inventoryAccount->name',		
+				),
+				array(
+				'name'=>'adjustment_account_id',
+				'value'=>'$data->adjustmentAccount->name',		
+				),
+				array(
+				'name'=>'assembly_account_id',
+				'value'=>'$data->assemblyAccount->name',		
+				),
+				array(
+				'name'=>'dimension1_id',
+				'value'=>'$data->dimension1->name',		
+				),
+				array(
+				'name'=>'dimension2_id',
+				'value'=>'$data->dimension2->name',		
+				),
 				'actual_cost',
 				'last_cost',
 				'material_cost',

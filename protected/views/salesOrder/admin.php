@@ -62,26 +62,44 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				
 		'id',
 		'transaction_number',
-		'transaction_type_id',
+		array(
+					'name'=>'transaction_type_id',
+					'value'=>'$data->transactionType->name',		
+				),
 		'version_status',
 		'type_status',
-		'customer_master_id',
+		array(
+					'name'=>'customer_master_id',
+					'value'=>'$data->customerMaster->name',		
+				),
 		
-		'customer_branch_id',
+		array(
+					'name'=>'customer_branch_id',
+					'value'=>'$data->customerBranch->name',		
+				),
 		'reference',
 		'customer_reference',
 		'comment',
 		'order_date',
 		'order_type',
-		'shipping_company_id',
+		array(
+					'name'=>'shipping_company_id',
+					'value'=>'$data->shippingCompany->name',		
+				),
 		'delivery_address',
 		'contact_phone',
 		'contact_email',
 		'deliver_to',
 		'freight_cost',
-		'from_stock_location_id',
+		array(
+					'name'=>'from_stock_location_id',
+					'value'=>'$data->fromStockLocation->name',		
+				),
 		'delivery_date',
-		'payment_term_id',
+		array(
+					'name'=>'payment_term_id',
+					'value'=>'$data->paymentTerm->name',		
+				),
 		'total',
 		
 		

@@ -12,8 +12,13 @@
 )); ?>
 
 	<div class="row">
+		<?php echo $form->label($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'code'); ?>
-		<?php echo $form->textField($model,'code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'code',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
 	<div class="row">
@@ -28,47 +33,47 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>200)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'long_description'); ?>
-		<?php echo $form->textField($model,'long_description',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'long_description',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'unit_item_code'); ?>
-		<?php echo $form->textField($model,'unit_item_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'measure_unit_id'); ?>
+		<?php echo $form->textField($model,'measure_unit_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'mb_status'); ?>
-		<?php echo $form->textField($model,'mb_status',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'stock_type_id'); ?>
+		<?php echo $form->textField($model,'stock_type_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'sales_account_code'); ?>
-		<?php echo $form->textField($model,'sales_account_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'sales_account_id'); ?>
+		<?php echo $form->textField($model,'sales_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'cogs_account_code'); ?>
-		<?php echo $form->textField($model,'cogs_account_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'cogs_account_id'); ?>
+		<?php echo $form->textField($model,'cogs_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'inventory_account_code'); ?>
-		<?php echo $form->textField($model,'inventory_account_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'inventory_account_id'); ?>
+		<?php echo $form->textField($model,'inventory_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'adjustment_account_code'); ?>
-		<?php echo $form->textField($model,'adjustment_account_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'adjustment_account_id'); ?>
+		<?php echo $form->textField($model,'adjustment_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'assembly_account_code'); ?>
-		<?php echo $form->textField($model,'assembly_account_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'assembly_account_id'); ?>
+		<?php echo $form->textField($model,'assembly_account_id'); ?>
 	</div>
 
 	<div class="row">

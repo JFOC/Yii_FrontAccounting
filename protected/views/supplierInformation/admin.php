@@ -71,16 +71,40 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				'account_no',
 				'website',
 				'bank_account',
-				'currency_id',
-				'payment_term_id',
+				array(
+					'name'=>'currency_id',
+					'value'=>'$data->currency->name',		
+				),
+				array(
+					'name'=>'payment_term_id',
+					'value'=>'$data->paymentTerm->name',		
+				),
 				'tax_included_status',
-				'dimension1_id',
-				'dimension2_id',
-				'tax_group_id',
+				array(
+					'name'=>'dimension1_id',
+					'value'=>'$data->dimension1->name',		
+				),
+				array(
+					'name'=>'dimension2_id',
+					'value'=>'$data->dimension2->name',		
+				),
+				array(
+					'name'=>'tax_group_id',
+					'value'=>'$data->taxGroup->name',		
+				),
 				'credit_limit',
-				'purchase_account_id',
-				'payable_account_id',
-				'payment_discount_account_id',
+				array(
+					'name'=>'purchase_account_id',
+					'value'=>'$data->purchaseAccount->name',		
+				),
+				array(
+					'name'=>'payable_account_id',
+					'value'=>'$data->payableAccount->name',		
+				),
+				array(
+					'name'=>'payment_discount_account_id',
+					'value'=>'$data->paymentDiscountAccount->name',		
+				),
 				'note',
 				'active_status',
 		

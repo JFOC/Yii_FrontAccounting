@@ -61,14 +61,23 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 				
-				'general_ledger_account_id',
-				'bank_account_type_id',
+				array(
+					'name'=>'general_ledger_account_id',
+					'value'=>'$data->generalLedgerAccount->name',		
+				),
+				array(
+					'name'=>'bank_account_type_id',
+					'value'=>'$data->bankAccountType->name',		
+				),
 				'account_name',
 				'account_number',
 				'bank_name',
 				
 				'address',
-				'currency_id',
+				array(
+					'name'=>'currency_id',
+					'value'=>'$data->currency->name',		
+				),
 				'default_currency_account_status',
 				'last_reconciled_date',
 				'ending_reconcile_balance',

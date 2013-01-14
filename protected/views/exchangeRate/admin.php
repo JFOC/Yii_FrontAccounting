@@ -59,9 +59,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'name'=>'id',
 					'header'=>'No',
 				),
-				
-				'id',
-				'currency_id',
+				array(
+					'name'=>'currency_id',
+					'value'=>'$data->currency->name',		
+				),
 				'rate_buy',
 				'rate_sell',
 				'date',

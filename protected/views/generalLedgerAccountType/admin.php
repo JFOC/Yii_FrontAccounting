@@ -62,7 +62,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				
 				
 				'name',
-				'general_ledger_account_class_id',
+				array(
+					'name'=>'general_ledger_account_class_id',
+					'value'=>'$data->generalLedgerAccountClass->name',		
+				),
 				'parent',
 				'active_status',
 		

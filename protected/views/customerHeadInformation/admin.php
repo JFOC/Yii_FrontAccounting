@@ -58,20 +58,37 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				array(
 					'name'=>'id',
 					'header'=>'No',
-				),
+				),				
 				
-				'id',
 				'name',
 				'reference',
 				'address',
 				'goods_and_services_tax',
-				'currency_id',
+				array(
+					'name'=>'currency_id',
+					'value'=>'$data->currency->name',		
+				),
 				
-				'sales_type_id',
-				'dimension1_id',
-				'dimension2_id',
-				'credit_status_id',
-				'payment_term_id',
+				array(
+					'name'=>'sales_type_id',
+					'value'=>'$data->salesType->name',		
+				),
+				array(
+					'name'=>'dimension1_id',
+					'value'=>'$data->dimension1->name',		
+				),
+				array(
+					'name'=>'dimension2_id',
+					'value'=>'$data->dimension2->name',		
+				),
+				array(
+					'name'=>'credit_status_id',
+					'value'=>'$data->creditStatus->name',		
+				),
+				array(
+					'name'=>'payment_term_id',
+					'value'=>'$data->paymentTerm->name',		
+				),
 				'discount',
 				'payment_discount',
 				'credit_limit',

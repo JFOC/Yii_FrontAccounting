@@ -58,27 +58,59 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				array(
 					'name'=>'id',
 					'header'=>'No',
-				),
+				),			
 				
-				'id',
-				'customer_head_id',
+				array(
+					'name'=>'customer_head_id',
+					'value'=>'$data->customerHead->name',		
+				),
 				'name',
 				'reference',
 				'address',
-				'area_id',
+				array(
+					'name'=>'area_id',
+					'value'=>'$data->area->name',		
+				),
 				
-				'sales_person_id',
+				array(
+					'name'=>'sales_person_id',
+					'value'=>'$data->salesPerson->name',		
+				),
 				'contact_name',
-				'default_location_id',
-				'tax_group_id',
-				'sales_account_id',
-				'sales_discount_account_id',
-				'receivable_account_id',
-				'payment_discount_account_id',
-				'default_shipping_company_id',
+				array(
+					'name'=>'default_location_id',
+					'value'=>'$data->defaultLocation->name',		
+				),
+				array(
+					'name'=>'tax_group_id',
+					'value'=>'$data->taxGroup->name',		
+				),
+				array(
+					'name'=>'sales_account_id',
+					'value'=>'$data->salesAccount!=null  ? $data->salesAccount->name : null ',
+				),
+				array(
+					'name'=>'sales_discount_account_id',
+					'value'=>'$data->salesDiscountAccount->name',		
+				),
+				array(
+					'name'=>'receivable_account_id',
+					'value'=>'$data->receivableAccount->name',		
+				),
+				array(
+					'name'=>'payment_discount_account_id',
+					'value'=>'$data->paymentDiscountAccount->name',		
+				),
+				array(
+					'name'=>'default_shipping_company_id',
+					'value'=>'$data->defaultShippingCompany->name',		
+				),
 				'disable_transaction',
 				'br_post_address',
-				'sales_group_id',
+				array(
+					'name'=>'sales_group_id',
+					'value'=>'$data->salesGroup->description',		
+				),
 				'note',
 				'active_status',
 		

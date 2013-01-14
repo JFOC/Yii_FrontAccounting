@@ -61,13 +61,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 
-				'quick_entry_id',
+				array(
+					'name'=>'quick_entry_id',
+					'value'=>'$data->quickEntry->description',		
+				),
 				'amount',
-				'quick_entry_action_id',
-				'destination_id',
-				'dimension1_id',
-				
-				'dimension2_id',
+				array(
+					'name'=>'quick_entry_action_id',
+					'value'=>'$data->quickEntryAction->name',		
+				),
+				array(
+					'name'=>'destination_id',
+					'value'=>'($data->destination != null) ? $data->destination->name : null',						
+				),
+				array(
+					'name'=>'dimension1_id',
+					'value'=>'$data->dimension1 != null ? $data->dimension2->name : null',		
+				),
+				array(
+					'name'=>'dimension2_id',
+					'value'=>'$data->dimension2->name',		
+				),
 		
 		
 				array(
@@ -80,7 +94,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'quick-entry-line-grid',	
 	'filter'=>$model,
 	'dataProvider' =>$model->search(),
-    'columns' => $dialog->columns(),
+    'columns' => $dialog->columns(),   				
     'template' => $dialog->link()."{summary}\n{items}\n{pager}",	
 	)); 
 ?>

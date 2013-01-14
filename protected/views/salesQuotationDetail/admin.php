@@ -61,8 +61,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 
-				'sales_order_id',
-				'stock_master_id',
+				array(
+					'header'=>'Transaction Number',
+					'name'=>'sales_order_id',
+					'value'=>'$data->salesOrder->transaction_number',		
+				),
+				array(
+					'name'=>'stock_master_id',
+					'value'=>'$data->stockMaster->description',		
+				),
 				'description',
 				'quantity_sent',
 				'unit_price',

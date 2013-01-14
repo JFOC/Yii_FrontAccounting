@@ -61,7 +61,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),				
 				
 				'name',
-				'payment_term_type_id',
+				array(
+				'name'=>'payment_term_type_id',
+				'value'=>'$data->paymentTermType->name',		
+				),
 				'days',
 				'active_status',
 		

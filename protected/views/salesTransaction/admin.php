@@ -61,16 +61,28 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 
-				'transaction_type_id',
+				array(
+					'name'=>'transaction_type_id',
+					'value'=>'$data->transactionType->name',		
+				),
 				'transaction_no',
 				'version_status',
-				'customer_head_id',
-				'customer_branch_id',
+				array(
+					'name'=>'customer_head_id',
+					'value'=>'$data->customerHead->name',		
+				),
+				array(
+					'name'=>'customer_branch_id',
+					'value'=>'$data->customerBranch->name',		
+				),
 				
 				'date',
 				'due_date',
 				'reference',
-				'sales_type_id',
+				array(
+					'name'=>'sales_type_id',
+					'value'=>'$data->salesType->name',		
+				),
 				'order',
 				'overdue_amount',
 				'overdue_gst',
@@ -78,11 +90,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				'overdue_freight_tax',
 				'overdue_discount',
 				'allocation',
-				'rate',
-				'shipping_company_id',
-				'dimension1_id',
-				'dimension2_id',
-				'payment_term_id',
+				// 'rate',
+				array(
+					'name'=>'rate',
+					'value'=>'$data->rate',
+				),
+				array(
+					'name'=>'shipping_company_id',
+					'value'=>'$data->shippingCompany->name',		
+				),
+				array(
+					'name'=>'dimension1_id',
+					'value'=>'$data->dimension1->name',		
+				),
+				array(
+					'name'=>'dimension2_id',
+					'value'=>'$data->dimension2->name',		
+				),
+				array(
+					'name'=>'payment_term_id',
+					'value'=>'$data->paymentTerm->name',		
+				),
 		
 		
 				array(

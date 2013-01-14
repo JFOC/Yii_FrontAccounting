@@ -40,8 +40,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php 
-	$dialog = $this->widget('ext.ecolumns.EColumnsDialog', array(
+<?php 	$dialog = $this->widget('ext.ecolumns.EColumnsDialog', array(
        'options'=>array(
             'title' => 'Layout settings',
             'autoOpen' => false,
@@ -60,34 +59,68 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'header'=>'No',
 				),
 				
-				'code',
-				'stock_category_id',
-				'tax_type_item_id',
-				'description',
-				'long_description',
-				'unit_item_code',
-				
-				'mb_status',
-				'sales_account_code',
-				'cogs_account_code',
-				'inventory_account_code',
-				'adjustment_account_code',
-				'assembly_account_code',
-				'dimension1_id',
-				'dimension2_id',
-				'actual_cost',
-				'last_cost',
-				'material_cost',
-				'labour_cost',
-				'overhead_cost',
-				'no_sale_status',
-				'editable_status',
-				'active_status',
-		
-		
-				array(
-					'class'=>'CButtonColumn',
-				),            
+
+			'code',
+			array(
+					'name'=>'stock_category_id',
+					'value'=>'$data->stockCategory->name',		
+				),
+			array(
+					'name'=>'tax_type_item_id',
+					'value'=>'$data->taxTypeItem->name',		
+				),
+			'description',
+			'long_description',
+			
+			array(
+					'name'=>'measure_unit_id',
+					'value'=>'$data->measureUnit->name',		
+				),
+			array(
+					'name'=>'stock_type_id',
+					'value'=>'$data->stockType->name',		
+				),
+			array(
+					'name'=>'sales_account_id',
+					'value'=>'$data->salesAccount->name',		
+				),
+			array(
+					'name'=>'cogs_account_id',
+					'value'=>'$data->cogsAccount->name',		
+				),
+			array(
+					'name'=>'inventory_account_id',
+					'value'=>'$data->inventoryAccount->name',		
+				),
+			array(
+					'name'=>'adjustment_account_id',
+					'value'=>'$data->adjustmentAccount->name',		
+				),
+			array(
+					'name'=>'assembly_account_id',
+					'value'=>'$data->assemblyAccount->name',		
+				),
+			array(
+					'name'=>'dimension1_id',
+					'value'=>'$data->dimension1->name',		
+				),
+			array(
+					'name'=>'dimension2_id',
+					'value'=>'$data->dimension2->name',		
+				),
+			'actual_cost',
+			'last_cost',
+			'material_cost',
+			'labour_cost',
+			'overhead_cost',
+			'no_sale_status',
+			'editable_status',
+			'active_status',
+			
+			
+			array(
+				'class'=>'CButtonColumn',
+			),            
            ),
        )
     ));

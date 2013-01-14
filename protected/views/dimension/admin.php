@@ -59,15 +59,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'name'=>'id',
 					'header'=>'No',
 				),
+				'reference',
+				'name',
+				'type_status',
+				'closed_status',
+				'date',
 				
-		'id',
-		'reference',
-		'name',
-		'type_status',
-		'closed_status',
-		'date',
-		
-		'due_date',
+				'due_date',
 		
 		
 				array(

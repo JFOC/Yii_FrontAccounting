@@ -59,10 +59,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'name'=>'id',
 					'header'=>'No',
 				),
-				
-				'id',
 				'name',
-				'contact_entity_id',
+				array(
+					'name'=>'contact_entity_id',
+					'value'=>'$data->contactEntity->name',		
+				),
 				'description',
 				'system_status',
 				'active_status',

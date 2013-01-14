@@ -60,10 +60,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'header'=>'No',
 				),
 				
-				'supplier_id',
-				'stock_master_id',
+				array(
+				'name'=>'supplier_id',
+				'value'=>'$data->supplier->name',		
+				),
+				array(
+				'name'=>'stock_master_id',
+				'value'=>'$data->stockMaster->code',		
+				),
 				'price',
-				'supplier_measure_unit_id',
+				array(
+				'name'=>'supplier_measure_unit_id',
+				'value'=>'$data->supplierMeasureUnit->name',		
+				),
 				'conversion_factor',
 				
 				'supplier_description',

@@ -1,6 +1,6 @@
 <?php
 /* @var $this OtherDisplaySettingController */
-/* @var $data User */
+/* @var $data User2 */
 ?>
 
 <div class="view">
@@ -9,39 +9,17 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
-	<?php echo CHtml::encode($data->username); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('timestamp')); ?>:</b>
+	<?php echo CHtml::encode($data->timestamp); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ip')); ?>:</b>
+	<?php echo CHtml::encode($data->ip); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
-	<?php echo CHtml::encode($data->email); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('file')); ?>:</b>
+	<?php echo CHtml::encode($data->file); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('activkey')); ?>:</b>
-	<?php echo CHtml::encode($data->activkey); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('createtime')); ?>:</b>
-	<?php echo CHtml::encode($data->createtime); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('lastvisit')); ?>:</b>
-	<?php echo CHtml::encode($data->lastvisit); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('superuser')); ?>:</b>
-	<?php echo CHtml::encode($data->superuser); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
-	<?php echo CHtml::encode($data->status); ?>
-	<br />
-
-	*/ ?>
 
 </div>

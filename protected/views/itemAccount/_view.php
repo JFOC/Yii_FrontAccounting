@@ -5,8 +5,12 @@
 
 <div class="view">
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('code')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->code), array('view', 'id'=>$data->code)); ?>
+	<?php echo CHtml::encode($data->code); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('stock_category_id')); ?>:</b>
@@ -25,33 +29,33 @@
 	<?php echo CHtml::encode($data->long_description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('unit_item_code')); ?>:</b>
-	<?php echo CHtml::encode($data->unit_item_code); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('mb_status')); ?>:</b>
-	<?php echo CHtml::encode($data->mb_status); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('measure_unit_id')); ?>:</b>
+	<?php echo CHtml::encode($data->measure_unit_id); ?>
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('sales_account_code')); ?>:</b>
-	<?php echo CHtml::encode($data->sales_account_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('stock_type_id')); ?>:</b>
+	<?php echo CHtml::encode($data->stock_type_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('cogs_account_code')); ?>:</b>
-	<?php echo CHtml::encode($data->cogs_account_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('sales_account_id')); ?>:</b>
+	<?php echo CHtml::encode($data->sales_account_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('inventory_account_code')); ?>:</b>
-	<?php echo CHtml::encode($data->inventory_account_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cogs_account_id')); ?>:</b>
+	<?php echo CHtml::encode($data->cogs_account_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('adjustment_account_code')); ?>:</b>
-	<?php echo CHtml::encode($data->adjustment_account_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('inventory_account_id')); ?>:</b>
+	<?php echo CHtml::encode($data->inventory_account_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('assembly_account_code')); ?>:</b>
-	<?php echo CHtml::encode($data->assembly_account_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('adjustment_account_id')); ?>:</b>
+	<?php echo CHtml::encode($data->adjustment_account_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('assembly_account_id')); ?>:</b>
+	<?php echo CHtml::encode($data->assembly_account_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('dimension1_id')); ?>:</b>

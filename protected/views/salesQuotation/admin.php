@@ -61,9 +61,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'header'=>'No',
 				),
 				array(
-					'name'=>'transaction_type_id',
-					'value'=>'$data->transactionType->name',		
+		            'name' => 'transaction_type_id',
+					'filter' => CHtml::listData(TransactionType::Model()->findAll(), 'id', 'name'),
+					'value'=>'$data->transactionType->name',						
+					//'value' => 'TransactionType::Model()->FindByPk($data->id)->name',
 				),
+				
+				// array\(
+					// 'name'=>'\1\2\3\4\5\6id',
+					// 'value'=>'$data->\1\3\5\7->name',		
+				// \),
 				
 				'version_status',
 				'type_status',
@@ -84,6 +91,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				'order_date',
 				'order_type',
 				//'shipping_company_id',
+				array(
+					'name'=>'shipping_company_id',
+					'value'=>'$data->shippingCompany->name',
+				),
 				array(
 					'name'=>'shipping_company_id',
 					'value'=>'$data->shippingCompany->name',
@@ -114,7 +125,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'sales-order-grid',	
 	'filter'=>$model,
-	'dataProvider' =>$model->search(),
+	'dataProvider' =>$model->with('transactionType')->search(),
     'columns' => $dialog->columns(),
     'template' => $dialog->link()."{summary}\n{items}\n{pager}",	
 )); ?>

@@ -63,14 +63,32 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 				'name',
 				'default_tax_type',
-				'default_measure_unit_id',
+				array(
+				'name'=>'default_measure_unit_id',
+				'value'=>'$data->defaultMeasureUnit->name',		
+				),
 				'default_mb',
-				'default_sales_account_id',
+				array(
+				'name'=>'default_sales_account_id',
+				'value'=>'$data->defaultSalesAccount->name',		
+				),
 				
-				'default_cogs_account_id',
-				'default_inventory_account_id',
-				'default_adjustment_account_id',
-				'default_assembly_account_id',
+				array(
+				'name'=>'default_cogs_account_id',
+				'value'=>'$data->defaultCogsAccount->name',		
+				),
+				array(
+				'name'=>'default_inventory_account_id',
+				'value'=>'$data->defaultInventoryAccount->name',		
+				),
+				array(
+				'name'=>'default_adjustment_account_id',
+				'value'=>'$data->defaultAdjustmentAccount->name',		
+				),
+				array(
+				'name'=>'default_assembly_account_id',
+				'value'=>'$data->defaultAssemblyAccount->name',		
+				),
 				'default_dimension1',
 				'default_dimension2',
 				'default_no_sale_status',

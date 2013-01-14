@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'code'); ?>
-		<?php echo $form->textField($model,'code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'code',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'code'); ?>
 	</div>
 
@@ -35,56 +35,56 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>200)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'long_description'); ?>
-		<?php echo $form->textField($model,'long_description',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textArea($model,'long_description',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'long_description'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'unit_item_code'); ?>
-		<?php echo $form->textField($model,'unit_item_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'unit_item_code'); ?>
+		<?php echo $form->labelEx($model,'measure_unit_id'); ?>
+		<?php echo $form->textField($model,'measure_unit_id'); ?>
+		<?php echo $form->error($model,'measure_unit_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'mb_status'); ?>
-		<?php echo $form->textField($model,'mb_status',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'mb_status'); ?>
+		<?php echo $form->labelEx($model,'stock_type_id'); ?>
+		<?php echo $form->textField($model,'stock_type_id'); ?>
+		<?php echo $form->error($model,'stock_type_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'sales_account_code'); ?>
-		<?php echo $form->textField($model,'sales_account_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'sales_account_code'); ?>
+		<?php echo $form->labelEx($model,'sales_account_id'); ?>
+		<?php echo $form->textField($model,'sales_account_id'); ?>
+		<?php echo $form->error($model,'sales_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'cogs_account_code'); ?>
-		<?php echo $form->textField($model,'cogs_account_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'cogs_account_code'); ?>
+		<?php echo $form->labelEx($model,'cogs_account_id'); ?>
+		<?php echo $form->textField($model,'cogs_account_id'); ?>
+		<?php echo $form->error($model,'cogs_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'inventory_account_code'); ?>
-		<?php echo $form->textField($model,'inventory_account_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'inventory_account_code'); ?>
+		<?php echo $form->labelEx($model,'inventory_account_id'); ?>
+		<?php echo $form->textField($model,'inventory_account_id'); ?>
+		<?php echo $form->error($model,'inventory_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'adjustment_account_code'); ?>
-		<?php echo $form->textField($model,'adjustment_account_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'adjustment_account_code'); ?>
+		<?php echo $form->labelEx($model,'adjustment_account_id'); ?>
+		<?php echo $form->textField($model,'adjustment_account_id'); ?>
+		<?php echo $form->error($model,'adjustment_account_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'assembly_account_code'); ?>
-		<?php echo $form->textField($model,'assembly_account_code',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'assembly_account_code'); ?>
+		<?php echo $form->labelEx($model,'assembly_account_id'); ?>
+		<?php echo $form->textField($model,'assembly_account_id'); ?>
+		<?php echo $form->error($model,'assembly_account_id'); ?>
 	</div>
 
 	<div class="row">

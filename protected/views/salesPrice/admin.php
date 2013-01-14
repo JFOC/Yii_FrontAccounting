@@ -61,9 +61,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 
-				'stock_master_id',
-				'sales_type_id',
-				'currency_id',
+				array(
+					'name'=>'stock_master_id',
+					'value'=>'$data->stockMaster->description',		
+				),
+				array(
+					'name'=>'sales_type_id',
+					'value'=>'$data->salesType->name',		
+				),
+				array(
+					'name'=>'currency_id',
+					'value'=>'$data->currency->name',		
+				),
 				'price',
 		
 				array(

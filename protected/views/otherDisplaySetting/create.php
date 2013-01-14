@@ -1,18 +1,18 @@
 <?php
 /* @var $this OtherDisplaySettingController */
-/* @var $model User */
+/* @var $model User2 */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'User2s'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	array('label'=>'List User2', 'url'=>array('index')),
+	array('label'=>'Manage User2', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create User</h1>
+<h1>Create User2</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

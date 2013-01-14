@@ -61,7 +61,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 
-				'quick_entry_type_id',
+				array(
+					'name'=>'quick_entry_type_id',
+					'value'=>'$data->quickEntryType->name',		
+				),
 				'description',
 				'base_amount',
 				'base_description',

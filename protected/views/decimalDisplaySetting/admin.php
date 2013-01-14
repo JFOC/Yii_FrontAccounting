@@ -1,15 +1,15 @@
 <?php
 /* @var $this DecimalDisplaySettingController */
-/* @var $model User */
+/* @var $model User2 */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'DecimalDisplaySetting'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
+	array('label'=>'List DecimalDisplaySetting', 'url'=>array('index')),
+	array('label'=>'Create DecimalDisplaySetting', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('user-grid', {
+	$.fn.yiiGridView.update('user2-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Users</h1>
+<h1>Manage DecimalDisplaySetting</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,8 +40,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php 
-	$dialog = $this->widget('ext.ecolumns.EColumnsDialog', array(
+<?php 	$dialog = $this->widget('ext.ecolumns.EColumnsDialog', array(
        'options'=>array(
             'title' => 'Layout settings',
             'autoOpen' => false,
@@ -50,7 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
         ),
        'htmlOptions' => array('style' => 'display: none'), //disable flush of dialog content
        'ecolumns' => array(
-            'gridId' => 'user-grid', //id of related grid
+            'gridId' => 'user2-grid', //id of related grid
             'storage' => 'session',  //where to store settings: 'db', 'session', 'cookie'
             'fixedLeft' => array('CCheckBoxColumn'), //fix checkbox to the left side 
             'model' => $model->search(), //model is used to get attribute labels
@@ -61,16 +60,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				),
 				
 				'id',
-				'username',
-				'password',
-				'email',
-				'activkey',
-				'createtime',
-				
-				'lastvisit',
-				'superuser',
-				'status',
-		
+				'timestamp',
+				'ip',
+				'file',
 		
 				array(
 					'class'=>'CButtonColumn',
@@ -79,7 +71,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
        )
     ));
 	$this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',	
+	'id'=>'user2-grid',	
 	'filter'=>$model,
 	'dataProvider' =>$model->search(),
     'columns' => $dialog->columns(),

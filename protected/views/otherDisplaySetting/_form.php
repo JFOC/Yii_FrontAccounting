@@ -1,13 +1,13 @@
 <?php
 /* @var $this OtherDisplaySettingController */
-/* @var $model User */
+/* @var $model User2 */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'user-form',
+	'id'=>'user2-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -16,51 +16,21 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->labelEx($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
+		<?php echo $form->error($model,'timestamp'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->labelEx($model,'ip'); ?>
+		<?php echo $form->textField($model,'ip',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->error($model,'ip'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'activkey'); ?>
-		<?php echo $form->textField($model,'activkey',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'activkey'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'createtime'); ?>
-		<?php echo $form->textField($model,'createtime'); ?>
-		<?php echo $form->error($model,'createtime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lastvisit'); ?>
-		<?php echo $form->textField($model,'lastvisit'); ?>
-		<?php echo $form->error($model,'lastvisit'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'superuser'); ?>
-		<?php echo $form->textField($model,'superuser'); ?>
-		<?php echo $form->error($model,'superuser'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
+		<?php echo $form->labelEx($model,'file'); ?>
+		<?php echo $form->textField($model,'file',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'file'); ?>
 	</div>
 
 	<div class="row buttons">

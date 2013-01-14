@@ -63,14 +63,37 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 				'name',
 				'default_tax_type',
-				'default_measure_unit_id',
+				array(
+					'name'=>'munit',
+					'value'=>'$data->defaultMeasureUnit->name',		
+				),
+				array(
+					'name'=>'munit',
+					'value'=>'$data->defaultMeasureUnit->name',		
+				),
+					
 				'default_mb',
-				'default_sales_account_id',
+				array(
+				'name'=>'default_sales_account_id',
+				'value'=>'$data->defaultSalesAccount->name',		
+				),
 				
-				'default_cogs_account_id',
-				'default_inventory_account_id',
-				'default_adjustment_account_id',
-				'default_assembly_account_id',
+				array(
+				'name'=>'default_cogs_account_id',
+				'value'=>'$data->defaultCogsAccount->name',		
+				),
+				array(
+				'name'=>'default_inventory_account_id',
+				'value'=>'$data->defaultInventoryAccount->name',		
+				),
+				array(
+				'name'=>'default_adjustment_account_id',
+				'value'=>'$data->defaultAdjustmentAccount->name',		
+				),
+				array(
+				'name'=>'default_assembly_account_id',
+				'value'=>'$data->defaultAssemblyAccount->name',		
+				),
 				'default_dimension1',
 				'default_dimension2',
 				'default_no_sale_status',
@@ -85,9 +108,43 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
     ));
 	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'stock-category-grid',	
+	'dataProvider'=>$model->with('defaultMeasureUnit')->search(),	
+	'filter'=>$model,
+	// 'dataProvider' =>$model->search(),
+    'columns' => $dialog->columns(),
+    'template' => $dialog->link()."{summary}\n{items}\n{pager}",	
+	)); 
+	
+	$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'stock-category-grid',	
 	'filter'=>$model,
 	'dataProvider' =>$model->search(),
     'columns' => $dialog->columns(),
     'template' => $dialog->link()."{summary}\n{items}\n{pager}",	
 	)); 
 ?>
+
+<?php
+ // $this->widget('zii.widgets.grid.CGridView', array(
+	// 'id'=>'stock-category-grid',
+	// 'dataProvider'=>$model->with('unit')->search(),
+	// 'filter'=>$model,
+	// 'columns'=>array(
+				// array(
+					// 'name'=>'id',
+					// 'header'=>'No',
+				// ),			
+
+				// 'name',
+				// 'default_tax_type',
+				// array(
+					// 'name'=>'default_measure_unit_id',
+					// 'value'=>'$data->defaultMeasureUnit->name',		
+				// ),
+		// array(
+			// 'class'=>'CButtonColumn',
+                        // 'template'=>'{update} {delete}',
+		// ),
+	// ),
+// ));
+ ?>

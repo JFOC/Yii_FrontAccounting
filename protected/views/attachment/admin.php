@@ -62,7 +62,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		
 				'name',
 				'description',
-				'transaction_type_id',
+				array(
+					'name'=>'transaction_type_id',
+					'value'=>'$data->transactionType->name',		
+				),
 				'transaction_no',
 				'unique_name',
 				

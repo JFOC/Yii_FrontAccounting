@@ -1,6 +1,6 @@
 <?php
 /* @var $this DateDisplaySettingController */
-/* @var $model User */
+/* @var $model User2 */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,38 +17,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->label($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->label($model,'ip'); ?>
+		<?php echo $form->textField($model,'ip',array('size'=>40,'maxlength'=>40)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'activkey'); ?>
-		<?php echo $form->textField($model,'activkey',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'createtime'); ?>
-		<?php echo $form->textField($model,'createtime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'lastvisit'); ?>
-		<?php echo $form->textField($model,'lastvisit'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'superuser'); ?>
-		<?php echo $form->textField($model,'superuser'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->label($model,'file'); ?>
+		<?php echo $form->textField($model,'file',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
 	<div class="row buttons">
