@@ -14,7 +14,7 @@ class DecimalDisplaySettingController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'rights', 
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -62,14 +62,14 @@ class DecimalDisplaySettingController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new User;
+		$model=new User2;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['User2']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['User2'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class DecimalDisplaySettingController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['User2']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['User2'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class DecimalDisplaySettingController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
+		$dataProvider=new CActiveDataProvider('User2');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class DecimalDisplaySettingController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new User('search');
+		$model=new User2('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
+		if(isset($_GET['User2']))
+			$model->attributes=$_GET['User2'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -150,7 +150,7 @@ class DecimalDisplaySettingController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=User::model()->findByPk($id);
+		$model=User2::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -162,7 +162,7 @@ class DecimalDisplaySettingController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='user2-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

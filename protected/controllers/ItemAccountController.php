@@ -14,7 +14,7 @@ class ItemAccountController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'rights', 
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -71,7 +71,7 @@ class ItemAccountController extends Controller
 		{
 			$model->attributes=$_POST['StockMaster'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class ItemAccountController extends Controller
 		{
 			$model->attributes=$_POST['StockMaster'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(

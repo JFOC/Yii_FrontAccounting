@@ -1,6 +1,6 @@
 <?php
 
-class ItemCategoryAccountController extends Controller
+class ItemCategoryAccountController extends RController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -14,7 +14,8 @@ class ItemCategoryAccountController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			// 'rights', 
+			'rights', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
