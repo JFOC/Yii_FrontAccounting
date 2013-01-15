@@ -129,6 +129,7 @@ class SalesOrder extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
+	 //var $munit;
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that
@@ -158,7 +159,10 @@ class SalesOrder extends CActiveRecord
 		$criteria->compare('delivery_date',$this->delivery_date,true);
 		$criteria->compare('payment_term_id',$this->payment_term_id);
 		$criteria->compare('total',$this->total);
+		// $criteria->compare('Transaction.name',$this->munit);
 
+		// $criteria->with = 'transactionType';	
+			
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

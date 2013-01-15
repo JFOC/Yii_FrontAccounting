@@ -34,6 +34,9 @@
  */
 class StockCategory extends CActiveRecord
 {
+
+	var $munit;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -65,7 +68,7 @@ class StockCategory extends CActiveRecord
 			array('name', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, default_tax_type, default_measure_unit_id, default_mb, default_sales_account_id, default_cogs_account_id, default_inventory_account_id, default_adjustment_account_id, default_assembly_account_id, default_dimension1, default_dimension2, default_no_sale_status, active_status', 'safe', 'on'=>'search'),
+			array('id, name, default_tax_type, default_measure_unit_id, default_mb, default_sales_account_id, default_cogs_account_id, default_inventory_account_id, default_adjustment_account_id, default_assembly_account_id, default_dimension1, default_dimension2, default_no_sale_status, active_status, munit,', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -111,6 +114,7 @@ class StockCategory extends CActiveRecord
 			'default_dimension2' => 'Default Dimension2',
 			'default_no_sale_status' => 'Default No Sale Status',
 			'active_status' => 'Active Status',
+			'munit' => 'Default Measure Unit',
 		);
 	}
 
@@ -124,9 +128,9 @@ class StockCategory extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('t.name',$this->name,true);
 		$criteria->compare('default_tax_type',$this->default_tax_type);
 		$criteria->compare('default_measure_unit_id',$this->default_measure_unit_id);
 		$criteria->compare('default_mb',$this->default_mb);
@@ -139,6 +143,10 @@ class StockCategory extends CActiveRecord
 		$criteria->compare('default_dimension2',$this->default_dimension2);
 		$criteria->compare('default_no_sale_status',$this->default_no_sale_status);
 		$criteria->compare('active_status',$this->active_status);
+	
+		$criteria->compare('defaultMeasureUnit.name',$this->munit, true);
+				
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

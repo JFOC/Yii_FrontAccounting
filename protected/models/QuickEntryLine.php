@@ -67,6 +67,7 @@ class QuickEntryLine extends CActiveRecord
 			'dimension1' => array(self::BELONGS_TO, 'Dimension', 'dimension1_id'),
 			'dimension2' => array(self::BELONGS_TO, 'Dimension', 'dimension2_id'),
 			'quickEntry' => array(self::BELONGS_TO, 'QuickEntry', 'quick_entry_id'),
+			'destination' => array(self::BELONGS_TO, 'Location', 'destination_id'),
 			'quickEntryAction' => array(self::BELONGS_TO, 'QuickEntryAction', 'quick_entry_action_id'),
 		);
 	}

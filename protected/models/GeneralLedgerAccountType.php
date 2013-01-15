@@ -101,3 +101,4 @@ class GeneralLedgerAccountType extends CActiveRecord
 		));
 	}
 }
+
